@@ -1,0 +1,211 @@
+body{
+    background-image: linear-gradient(black,blueviolet);
+}
+*{
+    box-sizing: border-box;
+}
+
+#headnav{
+    padding:1%;
+}
+
+.off-screen-menu{
+    background-color:black;
+    
+    height:50%;
+    width:100%;
+    max-width:450px;
+    position:fixed;
+    top:0;
+    right:-450px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:3rem;
+    transition:.3s ease;
+}
+
+.off-screen-menu.active{
+    right:0;
+}
+nav {
+    padding: 1%;
+    position:fixed;
+    margin-left: 90%;
+    background-image: linear-gradient(black,blueviolet);
+}
+
+.ham-menu{
+    height:50px;
+    width:50px;
+    margin-right:auto;
+    position:relative;
+    
+}
+
+.ham-menu span{
+    height:5px;
+    width:100%;
+    background-color:white;
+    border-radius: 25%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition:.3s ease;
+}
+
+.ham-menu span:nth-child(1){
+    top:25%;
+}
+.ham-menu span:nth-child(3){
+    top:75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top:50%;
+    transform:translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top:50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+
+.logo{
+    max-width: 10%;
+    max-height: 10%;
+    margin-left: 1%;
+}
+.burger{
+    max-width:3%;
+    max-height:3%;
+}
+
+.burgerfont{
+    font-family:CarvingFont;
+    transition: 1s ease;
+}
+
+.headertext{
+    text-align: center;
+}
+@font-face {
+    font-family: "CarvingFont";
+    src: url(MADECarvingSoftPERSONALUSE-SemiBold.otf);
+}
+
+#aboutme{
+    
+}
+
+.about{
+    display: flex;
+    align-items: center;
+}
+
+.me{
+    max-width: 300px;
+    max-height: 300px;
+    box-shadow: 10px 10px white;
+
+}
+.mealign{
+    margin-left: 5%;
+}
+.abouttext{
+    font-family: Impact;
+    font-size:22px;
+    margin-left: 5%;
+    color:white;
+}
+.subtitle{
+    text-align:center;
+    font-family:CarvingFont;
+    font-size:39px;
+    color:white;
+}
+
+
+#portfolio{
+    background-color: bisque;
+    
+}
+.column{
+    float:left;
+    width:29%;
+    padding:20px;
+    border-radius: 5px;
+    margin-left: 3%;
+    background-color:white;
+    font-family: 'Gill Sans';
+    box-shadow: 10px 10px black;
+    margin-bottom: 3%;
+    transition:all .5s ease-in-out;
+}
+.column:hover{
+    background-color: rgb(26, 195, 91);
+}
+
+.row:after{
+    content:"";
+    display:grid;
+    grid-column: span 2;
+    clear:both;
+    background-color:white
+}
+
+.webphoto{
+    max-width:100%;
+    max-height:100%;
+}
+
+.webheader{
+    text-align: center;
+    font-size:30px
+}
+
+#contact{
+    background-color: blueviolet;
+}
+
+.contactphoto{
+    max-width:25%;
+    max-height:100%;
+}
+
+.copyright{
+    text-align: center;
+    font-family:Arial;
+    font-size:20px;
+}
+
+.contactword{
+    float:right;
+}
+
+@media only screen and (min-width : 100px) and (max-width:730px) {
+    .column {
+        width: 95%;
+        margin-left: 2%;
+        float:none;
+    }
+    .abouttext{
+        margin-left: 10%;
+
+    }
+    .me{
+        max-width: 200px;
+        max-height: 200px;
+    
+    }
+    nav {
+        margin-left:80%;
+    }
+}
+
